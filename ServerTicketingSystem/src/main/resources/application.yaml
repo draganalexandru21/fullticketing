@@ -1,0 +1,28 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/ticketingsystem_db?useUnicode=true&characterEncoding=utf8&useSSL=false&createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate-dialect: org.hibernate.dialect.MySQL5Dialect
+      hibernate.format_sql: true
+
+    show-sql: true
+
+
+server:
+  error:
+    include-binding-errors: always
+    include-message: always
+  port: 8080
+
+
+application:
+   jwt:
+    secretKey: dafbiab4389jbnfkja9230190bfjbbfj
+    tokenPrefix: Bearer
+    tokenExpirationAfterDays: 7
+
